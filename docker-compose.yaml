@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  ssh:
+    build: .
+    cap_add:
+      - CAP_AUDIT_WRITE
+      - AUDIT_CONTROL
+    ports:
+      - "2222:22"
